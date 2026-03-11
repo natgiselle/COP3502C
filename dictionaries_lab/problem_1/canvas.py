@@ -1,4 +1,4 @@
-import course_data
+import problem_1.course_data as course_data
 data = course_data.actual_data
 
 student = input("Enter the student's name: ")
@@ -12,5 +12,3 @@ if student in data["roster"]:
     print(f"Total grade: {total:.2f}%")
 else:
     print("Student not found.")
-
-
