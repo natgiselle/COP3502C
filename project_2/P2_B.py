@@ -115,3 +115,43 @@ def string_to_data(data_string):
         # ex: index 15 in hex_chars is char 'f' so 15 is appended to str_data
         str_data.append(hex_chars.index(char.lower()))
     return str_data
+
+'''
+7) Translates RLE data into a human-readable representation.
+For each run, in order, it should display the run length in decimal (1-2 digits);
+the run value in hexadecimal (1 digit); and a delimiter, ':', between runs.
+(See examples in the standalone menu section.)
+Ex: to_rle_string([15,15,6,4]) returns the string '15f:64'
+'''
+def to_rle_string(rle_data):
+    hex_chars = "0123456789abcdef"
+    rle_data_str = ""
+    for i in range(0, len(rle_data), 2):
+        # gets the repetition count as a DECIMAL number and the value as a HEX char
+        # puts the values together as pairs separated by a colon
+        # ex: rle_data[0] = 14 meaning rle_data[i] = 14 therefore '14' + hex_chars[14] = '14e'
+        rep_count = str(rle_data[i])
+        rle_value = hex_chars[rle_data[i+1]]
+        if rle_data_str != "":
+            rle_data_str += ':'
+        rle_data_str += rep_count + rle_value
+    return rle_data_str
+
+'''
+8) Translates a string in human-readable RLE format (with delimiters) into RLE byte data. (Inverse of #7)
+Ex: string_to_rle('15f:64') returns the list of ints [15,15,6,4]
+'''
+def string_to_rle(rle_string):
+    # splits rle_string by colons and separates the DECIMAL repetition count from the HEX value
+    # the last char before the colon is ALWAYS the HEX value and everything before it is the DECIMAL repetition count
+    # ex: when part = '15f' it would find int('15') which is 15 and hex_chars.index('f') is 15
+    hex_chars = "0123456789abcdef"
+    rle_data = []
+    parts = rle_string.split(':')
+
+    for part in parts:
+        rep_count = int(part[:-1])
+        rle_value = hex_chars.index(part[-1].lower())
+        rle_data.append(rep_count)
+        rle_data.append(rle_value)
+    return rle_data
