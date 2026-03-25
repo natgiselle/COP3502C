@@ -18,6 +18,7 @@ p2 = People(32, 'peeps')
 
 print(p.age, p2.age)
 p.get_older() #does not take in paramaters if its just self
+p
 print(p.age,p2.age, People.age)
 
 
