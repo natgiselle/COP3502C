@@ -6,4 +6,5 @@ def calculation_average(nums):
     return average
 
 
-print(calculation_average([1]))
+# print(calculation_average([1]))
+
