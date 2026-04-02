@@ -1,4 +1,6 @@
 class People:
+
+    # KNOW THAT THE __init__() function is NOT required
     def __init__(self, age, name): # constructor 
         self.age = age
         self.name = name
@@ -11,15 +13,22 @@ class People:
         print(f"my name is {self.name}")
     
     def get_older(self):
-        age+= 10
+        #age+= 10
 
-p = People(19, 'natbat')
-p2 = People(32, 'peeps')
+#p = People(19, 'natbat')
+#p2 = People(32, 'peeps')
 
-print(p.age, p2.age)
-p.get_older() #does not take in paramaters if its just self
-p
-print(p.age,p2.age, People.age)
+#print(p.age, p2.age)
+#p.get_older() #does not take in paramaters if its just self
+#print(p.age,p2.age, People.age)
+
+
+class Air:
+    def blow_wind(self):
+        print("i am windy")
+
+a = Air()
+a.blow_wind()
 
 
 
