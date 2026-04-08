@@ -1,5 +1,4 @@
-from CowLab.cow import Cow
-
+from cow import Cow
 
 def get_cows():
     cow_names = ["heifer", "kitteh"]
