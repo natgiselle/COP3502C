@@ -1,4 +1,4 @@
-from cow import Cow
+from CowLab.cow import Cow
 
 
 def get_cows():

@@ -5,6 +5,7 @@ import unittest
 
 class TestRemoveVowels(unittest.TestCase):
     def test_remove_vowels(self):
+        # use assert equal when doing comparison and is typicaly used when involving strings
         self.assertEqual(remove_vowels("HAI"), "H")
         self.assertEqual(remove_vowels("hello"), "hll")
         self.assertEqual(remove_vowels("Pikachu"),"Pkch")
@@ -14,7 +15,10 @@ class TestRemoveVowels(unittest.TestCase):
 
 class TestPrime(unittest.TestCase):
     def test_is_prime(self):
+        # shoufl assert True if is prime not 1 and not negative
+        # should assert false if the number is 1, is not prime, is not prime and negative, and if it is negative and prime
         # negative numbers are NOT prime
+        # assert <Boolean Value> 
         self.assertFalse(is_prime(1))
         self.assertFalse(is_prime(-3))
         self.assertTrue(is_prime(5))
