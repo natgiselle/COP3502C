@@ -59,5 +59,3 @@ m1 = Monster(100, 'mikewazowski')
 m1.increase_level(40)
 print(m1.level)
 
-
-
