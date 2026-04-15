@@ -1,3 +1,11 @@
+# COP3502C 
+# Whackamole Game!
+# Natalie Ortiz
+# Professor Aggarwal
+
+# Youtube Link: https://youtu.be/bmaiYYmeMzI?si=1wik6CZ-vLYYgeBt
+
+
 import pygame
 import random
 
